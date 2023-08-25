@@ -23,18 +23,18 @@ class _CartState extends State<Cart> {
               children: [
                 barcart(),
                 Padding(
-                  padding: const EdgeInsets.only(top: 20, left: 30, right: 30),
+                  padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
                   child: Container(
-                    height: MediaQuery.of(context).size.height * .3,
+                    height: MediaQuery.of(context).size.height * .25,
                     child: ListView(
                         padding: EdgeInsets.all(8),
                         children: [prodactcart(), prodactcart()]),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 30, right: 30),
+                  padding: const EdgeInsets.only(left: 20, right: 30),
                   child: Container(
-                    height: 70,
+                    height: MediaQuery.of(context).size.height *.1 - 10,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         color: Colors.white),
@@ -106,7 +106,7 @@ class _CartState extends State<Cart> {
   Container prodactcart() {
     return Container(
       height: 100,
-      width: 200,
+      width: MediaQuery.of(context).size.width *.5 - 11,
       color: mainc,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -122,7 +122,7 @@ class _CartState extends State<Cart> {
                     fit: BoxFit.cover)),
           ),
           SizedBox(
-            width: 10,
+            width: 8,
           ),
           Container(
             child: Column(

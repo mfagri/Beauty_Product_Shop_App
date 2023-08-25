@@ -235,7 +235,7 @@ class _productinfoState extends State<productinfo> {
                                   children: [
                                     Container(
                                       height: 40,
-                                      width: 120,
+                                      width: MediaQuery.of(context).size.width *.2,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(20),
                                         color: Colors.white
@@ -251,7 +251,7 @@ class _productinfoState extends State<productinfo> {
                                     ),
                                     InkWell(
                                       onTap: () {
-                                        Get.to(Cart());
+                                        Get.to(Cart(),transition: Transition.circularReveal,duration: Duration(seconds: 1));
                                       },
                                       child: Container(
                                         height: 70,
